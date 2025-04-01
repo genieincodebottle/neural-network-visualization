@@ -1,0 +1,110 @@
+/* ActivationFunctionAnimation.css */
+.activation-function-container {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: fit-content;
+    font-family: sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .activation-function-container h3 {
+    color: #00ffff;
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  .activation-function-container p {
+    text-align: center;
+    font-size: 0.9em;
+    color: #aaa;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  .activation-function-container p strong {
+      color: #eee;
+  }
+  
+  .af-canvas {
+    display: block;
+    background-color: #282828;
+    border: 1px solid #444;
+    border-radius: 4px;
+    margin: 15px auto;
+  }
+  
+  .af-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Increased gap */
+    margin-bottom: 15px;
+  }
+  
+  .af-controls button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #00aa55;
+    color: white;
+    transition: background-color 0.2s;
+  }
+  
+  .af-controls button:hover {
+    background-color: #00cc66;
+  }
+  .af-controls button:disabled {
+      background-color: #555;
+      cursor: not-allowed;
+  }
+  
+  
+  .af-select, .af-slider {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .af-select label, .af-slider label {
+    font-size: 0.9em;
+    color: #ccc;
+  }
+  
+  .af-select select {
+      padding: 5px 8px;
+      background-color: #333;
+      border: 1px solid #555;
+      color: #eee;
+      border-radius: 3px;
+      cursor: pointer;
+  }
+  
+  .af-slider input[type="range"] {
+    cursor: pointer;
+    width: 100px;
+  }
+  
+  .af-info {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #bbb;
+    margin-bottom: 10px; /* Space before description */
+  }
+  
+  .af-description {
+      font-size: 0.85em;
+      font-style: italic;
+      color: #999;
+      max-width: 450px;
+      margin: 10px auto 0 auto; /* Center description */
+  }

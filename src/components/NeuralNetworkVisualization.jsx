@@ -1,5 +1,5 @@
 // NeuralNetworkVisualization.jsx
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import './NeuralNetworkVisualization.css';
 
 // --- (Keep existing Icon components) ---

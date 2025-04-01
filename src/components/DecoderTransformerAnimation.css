@@ -1,0 +1,256 @@
+/* DecoderTransformerAnimation.css */
+.transformer-container {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 700px; /* Adjust width */
+    font-family: sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .transformer-container h3 {
+    color: #00ffff;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .transformer-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+  }
+  
+  .transformer-controls button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    border: none; border-radius: 4px; font-weight: bold;
+    cursor: pointer; background-color: #00aa55; color: white;
+    transition: background-color 0.2s;
+  }
+  .transformer-controls button:hover { background-color: #00cc66; }
+  .transformer-controls button:disabled { background-color: #555; cursor: not-allowed; }
+  .transformer-controls button:nth-of-type(3) { background-color: #0077cc; } /* Manual step button */
+  .transformer-controls button:nth-of-type(3):hover { background-color: #0099ff; }
+  
+  
+  .sequence-container {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  .sequence-label {
+      font-size: 0.9em;
+      color: #aaa;
+      margin-bottom: 8px;
+  }
+  
+  .tokens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    min-height: 40px; /* Ensure space */
+  }
+  
+  .token {
+    border: 1px solid #555;
+    background-color: #333;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    min-width: 40px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    position: relative; /* For potential absolute elements like arrows */
+  }
+  
+  .token-processing {
+    border-color: #ffaa00;
+    box-shadow: 0 0 8px rgba(255, 170, 0, 0.6);
+    transform: scale(1.05);
+  }
+  .token-embedding {
+      background-color: #4a4a70; /* Indicate embedding transformation */
+      border-color: #77f;
+  }
+  
+  .token-attention-source {
+      background-color: #cc0055; /* Magenta-like */
+      border-color: #ff3388;
+      transform: scale(1.1);
+      z-index: 2;
+  }
+  .token-attention-target {
+       border-color: #cc0055; /* Match source border */
+  }
+  .token-predicting {
+      border-style: dashed;
+      color: #888;
+  }
+  
+  
+  .embedding-layer {
+      border: 1px dashed #77f;
+      padding: 10px 20px;
+      margin: 15px 0;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #aaa;
+      width: 80%;
+      transition: background-color 0.3s;
+  }
+  .embedding-active {
+      background-color: rgba(100, 100, 200, 0.2);
+      color: #ccf;
+  }
+  
+  .transformer-stack {
+    width: 90%;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Space between layers */
+  }
+  
+  .transformer-layer {
+    border: 1px solid #666;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: #282828;
+    padding: 5px;
+    transition: background-color 0.3s;
+  }
+  .layer-active {
+     background-color: #383838;
+     border-color: #888;
+  }
+  
+  
+  .layer-block {
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 12px;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.85em;
+    color: #bbb;
+    position: relative; /* For attention arrows */
+    overflow: hidden; /* Hide overflowing arrows */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .block-active {
+      border-color: #00ffff;
+      color: #00ffff;
+      background-color: #304040;
+      box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+  }
+  
+  /* Basic Attention Arrow Styling */
+  .attention-arrow {
+      position: absolute;
+      height: 2px;
+      background-color: rgba(255, 0, 100, 0.7); /* Magenta arrow */
+      transition: all 0.2s ease-out;
+      opacity: 0; /* Hidden by default */
+      transform-origin: left center;
+      pointer-events: none;
+      z-index: 1; /* Below source token potentially */
+  }
+  
+  /* Arrowhead (pseudo-element) */
+  .attention-arrow::after {
+      content: '';
+      position: absolute;
+      right: -1px;
+      top: -3px; /* Center vertically relative to the 2px line */
+      width: 0;
+      height: 0;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 6px solid rgba(255, 0, 100, 0.7); /* Arrow points right */
+  }
+  
+  
+  .output-layer {
+      border: 1px dashed #00ffaa;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #aaa;
+      width: 80%;
+      transition: background-color 0.3s;
+  }
+  .output-active {
+       background-color: rgba(0, 200, 150, 0.1);
+       color: #55ffcc;
+  }
+  .predicted-token {
+      margin-top: 8px;
+      font-size: 1.1em;
+  }
+  .predicted-token strong {
+      color: #ffaa00;
+      font-weight: bold;
+      padding: 2px 6px;
+      background-color: rgba(255, 170, 0, 0.1);
+      border-radius: 3px;
+  }
+  
+  .transformer-info {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8em;
+    color: #888;
+    background-color: #222;
+    padding: 8px;
+    border-radius: 4px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .transformer-info span {
+      min-width: 120px;
+      text-align: center;
+  }
+
+  /* Add this to DecoderTransformerAnimation.css */
+
+.transformer-controls {
+    /* ... other styles ... */
+    align-items: center; /* Better align items vertically */
+  }
+  
+  .control-slider {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: 10px; /* Add some space */
+  }
+  
+  .control-slider label {
+      font-size: 0.85em;
+      color: #ccc;
+      min-width: 130px; /* Give label space */
+      text-align: right;
+  }
+  
+  .control-slider input[type="range"] {
+      cursor: pointer;
+      width: 100px; /* Adjust width */
+  }

@@ -1,0 +1,103 @@
+/* GradientDescentAnimation.css */
+.gradient-descent-container {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: fit-content; /* Center based on content width */
+    font-family: sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .gradient-descent-container h3 {
+    color: #00ffff;
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  .gradient-descent-container p {
+      text-align: center;
+      font-size: 0.9em;
+      color: #aaa;
+  }
+  
+  .gd-canvas {
+    display: block; /* Remove extra space below canvas */
+    background-color: #282828;
+    border: 1px solid #444;
+    border-radius: 4px;
+    margin: 15px auto; /* Center canvas */
+  }
+  
+  .gd-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 15px; /* Space between control elements */
+    margin-bottom: 15px;
+  }
+  
+  .gd-controls button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #00aa55;
+    color: white;
+    transition: background-color 0.2s;
+  }
+  
+  .gd-controls button:hover {
+    background-color: #00cc66;
+  }
+  .gd-controls button:disabled {
+      background-color: #555;
+      cursor: not-allowed;
+  }
+  
+  
+  .gd-slider, .gd-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .gd-slider label, .gd-input label {
+    font-size: 0.9em;
+    color: #ccc;
+  }
+  
+  .gd-slider input[type="range"] {
+    cursor: pointer;
+    width: 120px; /* Adjust width as needed */
+  }
+  
+  .gd-input input[type="number"] {
+      width: 60px;
+      padding: 4px;
+      background-color: #333;
+      border: 1px solid #555;
+      color: #eee;
+      border-radius: 3px;
+  }
+  
+  
+  .gd-info {
+    display: flex;
+    justify-content: space-around; /* Distribute info items */
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: #bbb;
+  }
+  
+  .gd-info span {
+      min-width: 120px; /* Ensure some minimum width for each item */
+      text-align: center;
+  }

@@ -1,38 +1,56 @@
+/* App.css */
+
+body {
+  background-color: #121212; /* Dark background for the whole page */
+  color: #e0e0e0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column; /* Stack components vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 20px 10px; /* Add padding top/bottom and some side padding */
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+.visualization-section {
+  width: 100%;
+  max-width: 1050px; /* Allow slightly wider for container padding */
+  margin-bottom: 40px; /* Add space below each section */
+  display: flex;         /* Use flex for section content */
+  flex-direction: column; /* Stack title above component */
+  align-items: center;    /* Center title and component */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.visualization-section h1 {
+  color: #00bcd4; /* Or another highlight color */
+  margin-bottom: 15px;
+  font-weight: 300; /* Lighter font weight */
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+  width: fit-content; /* Make border only as wide as text */
 }
+
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #444; /* A subtle line separator */
+  width: 80%; /* Make it slightly narrower */
+  max-width: 800px;
+  margin: 20px 0 40px 0; /* Add space around the divider */
+}
+
+/* Ensure components within sections take appropriate width */
+.visualization-section > * {
+    /* Targeting NeuralNetworkVisualization and GradientDescentAnimation direct children */
+   width: 100%; /* Allow them to fill the section width */
+}
+
+/* Add specific overrides if needed */
