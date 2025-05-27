@@ -68,3 +68,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+---
+
+## About the Author
+
+**genieincodebottle** is a prolific developer and AI enthusiast, sharing open-source projects and resources for the community. You can find more about the author on their [GitHub profile](https://github.com/genieincodebottle) and [Instagram](https://www.instagram.com/genieincodebottle/).
+
+### Other Public Repositories by genieincodebottle
+
+- [generative-ai](https://github.com/genieincodebottle/generative-ai): Comprehensive resources on Generative AI, including a detailed roadmap, projects, use cases, interview preparation, and coding preparation.
+- [parsemypdf](https://github.com/genieincodebottle/parsemypdf): Collection of PDF parsing libraries for efficient snapshot, text, table, and metadata extraction.
+- [rag-app-on-aws](https://github.com/genieincodebottle/rag-app-on-aws): Terraform-based IaC for deploying AWS backend services, integrated with Gemini Pro and Embedding models for AI-powered document querying.
+- [genieincodebottle](https://github.com/genieincodebottle/genieincodebottle): Config files for the GitHub profile.
+- [genaicodelab](https://github.com/genieincodebottle/genaicodelab): Comprehensive resources on Generative AI, including a detailed codebase and tutorials.
+- [conversational-analytics](https://github.com/genieincodebottle/conversational-analytics): Conversational analytics tools and resources.
+- [remote-mcp-server-authless](https://github.com/genieincodebottle/remote-mcp-server-authless): Authless remote MCP server implementation.
+- [neural-network-visualization](https://github.com/genieincodebottle/neural-network-visualization): This repository.
+
+For a full list, visit the [repositories page](https://github.com/genieincodebottle?tab=repositories).
